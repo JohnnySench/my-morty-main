@@ -9,7 +9,7 @@ const routes = [
 
 
 const router = createRouter({
-    routes,
+    routes: routes,
     history: createWebHistory()
 })
 

@@ -1,19 +1,14 @@
 <script lang="ts">
-import {mapActions} from "vuex";
+
+import CardContainer from "./components/MainContent/CardContainer.vue";
 
 export default {
   name: 'App',
+  components: {CardContainer},
   data: () => ({
 
   }),
-  methods: {
-    ...mapActions({
-      fetchCharacters: "characters/INIT_CHARACTERS"
-    })
-  },
-  mounted() {
-    this.fetchCharacters()
-  }
+
 }
 </script>
 
@@ -26,11 +21,10 @@ export default {
 <!--    </navheader>-->
 <!--    titleheader-->
 <!--  </header>-->
-<!--  <main>-->
-<!--    <card-content>-->
-<!--      <card-item></card-item>-->
-<!--    </card-content>-->
-<!--  </main>-->
+  <main>
+    <h1>MAIN</h1>
+    <CardContainer/>
+  </main>
 <!--  <footer>-->
 <!--    statistic-->
 <!--    server-->

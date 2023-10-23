@@ -1,35 +1,27 @@
 import axios from "axios";
 
 interface State {
-    characters: Object
+    characters: Array<Object>,
 }
+
 export const charactersFromMovie = {
-    state: () :State => ({
-        characters: {}
+    state: (): State => ({
+        characters: [],
     }),
     getters: {
-        GET_CHARACTERS(state: State):Object {
+        GET_CHARACTERS(state: State): Array<Object> {
             return state.characters
         }
     },
     mutations: {
-        SET_CHARACTERS(state: State, data: Object) {
+        SET_CHARACTERS(state: State, data: Array<Object>): void {
             state.characters = data;
+            console.log(state.characters)
         }
     },
     actions: {
         async INIT_CHARACTERS({commit}) {
-            try {
-                await axios.get("https://rickandmortyapi.com/api/character")
-                    .then(response => {
-                        commit('SET_CHARACTERS', response.data)
-                    })
-
-            } catch (e) {
-                alert(e)
-            } finally {
-                console.log('В любом случае сделаю это')
-            }
+            return await axios.get<Object>("https://rickandmortyapi.com/api/character")
         }
     },
     namespaced: true
