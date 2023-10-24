@@ -1,14 +1,22 @@
 <script lang="ts">
 import {defineComponent} from 'vue'
+import AliveCharacters from "./UI components/AliveCharacters.vue";
 export default defineComponent({
   name: "CardItemInfo",
+  components: {AliveCharacters},
+  props: {
+    itemCharacter: {
+      type: Object,
+      required: true
+    }
+  }
 })
 </script>
 
 <template>
   <v-card-title class="pt-4">
-    Artist Morty
-    <v-card-title>Alive - Human</v-card-title>
+    {{itemCharacter.name}}
+    <AliveCharacters :health="itemCharacter.status" :gender="itemCharacter.species"/>
   </v-card-title>
   <v-card-text>
     <div>Whitehaven Beach</div>

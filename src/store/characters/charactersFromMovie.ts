@@ -20,7 +20,7 @@ export const charactersFromMovie = {
         }
     },
     actions: {
-        async INIT_CHARACTERS({commit}) {
+        async INIT_CHARACTERS() {
             return await axios.get<Object>("https://rickandmortyapi.com/api/character")
         }
     },

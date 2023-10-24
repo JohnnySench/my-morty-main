@@ -15,16 +15,17 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="card-wrapper">
+  <div class="card-wrapper mx-auto">
     <v-card
         class="mx-auto d-flex"
         v-for="item of characters" :key="item.id"
         style="border-radius: 10px !important;"
-        max-width="400"
+        max-width="600"
     >
       <div>
         <v-img
             class="align-end text-white"
+            width="230"
             height="220"
             :src="item.image"
             cover
@@ -33,7 +34,7 @@ export default defineComponent({
         </v-img>
       </div>
       <div>
-        <card-item-info/>
+        <card-item-info :item-character="item"/>
       </div>
     </v-card>
   </div>
@@ -45,5 +46,6 @@ export default defineComponent({
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
+    max-width: 1219px;
   }
 </style>
