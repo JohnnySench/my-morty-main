@@ -24,12 +24,13 @@ export default defineComponent({
 </script>
 
 <template>
-  <div>
-    <h1>cardContainer</h1>
-    <card-container-item v-if="dataCharacters?.length > 0" :characters="dataCharacters"/>
+  <div class="card-container py-16" >
+    <card-container-item v-if="dataCharacters.length > 0" :characters="dataCharacters"/>
   </div>
 </template>
 
 <style scoped lang="scss">
-
+  .card-container {
+    background-color: rgb(39,43,51);
+  }
 </style>
