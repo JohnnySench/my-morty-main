@@ -3,10 +3,11 @@ import {defineComponent} from 'vue'
 import FooterStatistics from "./UI  Footer/FooterStatistics.vue";
 import ServerStatus from "./UI  Footer/ServerStatus.vue";
 import ExternalLink from "./UI  Footer/ExternalLink.vue";
+import SourcesLinks from "./UI  Footer/SourcesLinks.vue";
 
 export default defineComponent({
   name: "FooterContainer",
-  components: {ExternalLink, ServerStatus, FooterStatistics}
+  components: {SourcesLinks, ExternalLink, ServerStatus, FooterStatistics}
 })
 </script>
 
@@ -15,6 +16,7 @@ export default defineComponent({
     <FooterStatistics/>
     <ServerStatus/>
     <ExternalLink/>
+    <SourcesLinks/>
   </div>
 </template>
 

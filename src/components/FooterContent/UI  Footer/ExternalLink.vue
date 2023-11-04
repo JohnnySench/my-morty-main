@@ -34,7 +34,7 @@ export default defineComponent({
         v-for="(icon, index) in styleLinksFooter"
         :key="index"
         @click="icon.action"
-        class="container-link mr-4">
+        class="container-link mr-6">
       <div class="icon-wrapper mr-2">
         <v-icon
             class="icon-footer"
@@ -42,7 +42,7 @@ export default defineComponent({
             :icon="icon.icon"
             color="white"/>
       </div>
-      <div class="link-wrapper d-flex flex-column">
+      <div class="link-wrapper d-flex flex-column text-capitalize">
         <span class="text-grey">{{icon.title}}</span>
         <span class="text--white">{{icon.subtitle}}</span>
       </div>
