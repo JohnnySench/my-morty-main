@@ -16,6 +16,7 @@
     "vuex": "^4.1.0"
   },
   "devDependencies": {
+    "@mdi/font": "^7.3.67",
     "@vitejs/plugin-vue": "^4.2.3",
     "sass": "^1.69.4",
     "sass-loader": "^13.3.2",
