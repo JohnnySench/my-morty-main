@@ -1,29 +1,20 @@
 <script lang="ts">
-
-import CardContainer from "./components/MainContent/CardContainer.vue";
-import FooterContainer from "./components/FooterContent/FooterContainer.vue";
 import HeaderContainer from "./components/HeaderContent/HeaderContainer.vue";
-import BackgroundMain from "./components/MainContent/BackgroundContent/BackgroundMain.vue";
-
+import FooterContainer from "./components/FooterContent/FooterContainer.vue";
 export default {
   name: 'App',
-  components: {BackgroundMain, HeaderContainer, FooterContainer, CardContainer},
+  components: {FooterContainer, HeaderContainer},
   data: () => ({}),
-
 }
 </script>
 
 <template>
-  <nav>
+  <div class="container">
     <HeaderContainer/>
-  </nav>
-  <main>
-    <BackgroundMain/>
-    <CardContainer/>
-  </main>
-  <footer>
+    <router-view/>
     <FooterContainer/>
-  </footer>
+  </div>
+
 </template>
 
 <style lang="scss" scoped>

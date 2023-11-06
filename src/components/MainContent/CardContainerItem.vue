@@ -1,7 +1,7 @@
 <script lang="ts">
 import {defineComponent, PropType} from 'vue'
 import CardItemInfo from "./CardItemInfo.vue";
-import CharactersItemData from "../../globalInt.ts";
+import CharactersItemData from "../../globalInt";
 
 export default defineComponent({
   name: "CardContainerItem",

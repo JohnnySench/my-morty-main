@@ -25,9 +25,11 @@ export default defineComponent({
 
 <template>
   <v-card-title class="pt-4 d-inline-block">
-    <h3 class="font-weight-bold text--white text--link">
-      {{itemCharacter.name}}
-    </h3>
+      <router-link :to="{name: 'character', params: {userId: itemCharacter.id}}">
+        <h3 class="font-weight-bold text--white text--link">
+          {{itemCharacter.name}}
+        </h3>
+      </router-link>
     <AliveCharacters :status-info="statusCharacters"/>
   </v-card-title>
   <v-card-text class="pt-0 status-location">

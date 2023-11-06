@@ -2,20 +2,22 @@ import axios from "axios";
 
 interface State {
     characters: Array<Object>,
-    serverIsOn: boolean
+    serverIsOn: boolean,
+    oneCharacter: Array<Object>
 }
 
 export const charactersFromMovie = {
     state: (): State => ({
         characters: [],
-        serverIsOn: false
+        serverIsOn: false,
+        oneCharacter: []
     }),
     getters: {
         GET_CHARACTERS(state: State): Array<Object> {
             return state.characters
         },
         GET_SERVER_STATUS(state: State): boolean {
-            return  state.serverIsOn
+            return state.serverIsOn
         }
     },
     mutations: {
@@ -29,6 +31,10 @@ export const charactersFromMovie = {
     actions: {
         async INIT_CHARACTERS() {
             return await axios.get<Object>("https://rickandmortyapi.com/api/character")
+
+        },
+        async INIT_CARD_ONE_CHARACTER(userId: string) {
+            return await axios.get<Object>(`https://rickandmortyapi.com/api/character/${userId}`)
 
         }
     },
