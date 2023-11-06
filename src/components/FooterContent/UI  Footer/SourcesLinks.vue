@@ -28,12 +28,12 @@ export default defineComponent({
   <div class="d-flex align-center flex-nowrap justify-center mt-6">
     <div
         v-for="(icon, index) of linkIconSources"
-        :key="index"
-        class="text-grey mr-8">
+        class="text-grey mr-8"
+        :key="index">
       <v-icon
-          @click="icon.action"
           class="text--link"
-          :icon="icon.icon"/>
+          :icon="icon.icon"
+          @click="icon.action"/>
     </div>
   </div>
 </template>

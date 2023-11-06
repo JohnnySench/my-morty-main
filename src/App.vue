@@ -2,36 +2,23 @@
 
 import CardContainer from "./components/MainContent/CardContainer.vue";
 import FooterContainer from "./components/FooterContent/FooterContainer.vue";
+import HeaderContainer from "./components/HeaderContent/HeaderContainer.vue";
 
 export default {
   name: 'App',
-  components: {FooterContainer, CardContainer},
-  data: () => ({
-
-  }),
+  components: {HeaderContainer, FooterContainer, CardContainer},
+  data: () => ({}),
 
 }
 </script>
 
 <template>
-  <h1>Hello</h1>
-<!--  <header>-->
-<!--    <navheader>-->
-<!--      logo-->
-<!--      actionsbtns-->
-<!--    </navheader>-->
-<!--    titleheader-->
-<!--  </header>-->
+  <HeaderContainer/>
   <main>
-    <h1>MAIN</h1>
     <CardContainer/>
   </main>
   <footer>
     <FooterContainer/>
-    server
-    company
-    links
-    author
   </footer>
 
 </template>

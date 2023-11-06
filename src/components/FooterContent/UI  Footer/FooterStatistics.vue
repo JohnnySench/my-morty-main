@@ -40,8 +40,10 @@ export default defineComponent({
     <span
         v-for="(item, index) in infoForFooter"
         :key="index"
+        :class="item.classField"
         @click="item.action"
-        :class="item.classField">{{ item.titleField }}: {{ item.valueField }}
+    >
+      {{ item.titleField }}: {{ item.valueField }}
     </span>
   </div>
 </template>
