@@ -1,7 +1,7 @@
 <script lang="ts">
 import {defineComponent} from 'vue'
 import PageInfo from "../components/PageInfoCharacters/PageInfo.vue";
-import {mapActions} from "vuex";
+import {mapActions, mapGetters} from "vuex";
 
 export default defineComponent({
   name: "Character",
@@ -9,21 +9,18 @@ export default defineComponent({
     cardInfo: []
   }),
   components: {PageInfo},
-  computed: {
-    getUserId():string {
-      return this.$route.params.userId
-    }
-  },
   methods: {
     ...mapActions({
       getCharacter: "characters/INIT_CARD_ONE_CHARACTER"
     })
   },
-  async mounted() {
-    await this.getCharacter(this.getUserId)
-        .then(response => {
-          console.log(response)
-        })
+  computed: {
+    ...mapGetters({
+      getInfoCharacter: "characters/GET_CHARACTERS"
+    })
+  },
+  mounted() {
+    this.getCharacter(this.$route.params.userId)
   }
 })
 </script>

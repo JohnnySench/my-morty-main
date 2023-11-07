@@ -1,9 +1,10 @@
 import axios from "axios";
+import CharactersItemData from "../../globalInt.ts";
 
 interface State {
     characters: Array<Object>,
     serverIsOn: boolean,
-    oneCharacter: Array<Object>
+    oneCharacter: Array<CharactersItemData>
 }
 
 export const charactersFromMovie = {
@@ -21,7 +22,7 @@ export const charactersFromMovie = {
         }
     },
     mutations: {
-        SET_CHARACTERS(state: State, data: Array<Object>): void {
+        SET_CHARACTERS(state: State, data: Array<CharactersItemData>): void {
             state.characters = data;
         },
         SET_SERVER_IS_ON(state: State, data: boolean): void {
@@ -31,11 +32,12 @@ export const charactersFromMovie = {
     actions: {
         async INIT_CHARACTERS() {
             return await axios.get<Object>("https://rickandmortyapi.com/api/character")
-
         },
-        async INIT_CARD_ONE_CHARACTER(userId: string) {
-            return await axios.get<Object>(`https://rickandmortyapi.com/api/character/${userId}`)
-
+        async INIT_CARD_ONE_CHARACTER({commit}: any, userId: string) {
+            await axios.get<CharactersItemData>(`https://rickandmortyapi.com/api/character/${userId}`)
+                .then(response => {
+                    commit('SET_CHARACTERS', response.data)
+                })
         }
     },
     namespaced: true
