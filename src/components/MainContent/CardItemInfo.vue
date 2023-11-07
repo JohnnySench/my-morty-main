@@ -1,7 +1,7 @@
 <script lang="ts">
 import {defineComponent, PropType} from 'vue'
 import AliveCharacters from "./UI components/AliveCharacters.vue";
-import CharactersItemData from "../../globalInt";
+import {CharactersItemData} from "@/globalInt";
 export default defineComponent({
   name: "CardItemInfo",
   components: {AliveCharacters},

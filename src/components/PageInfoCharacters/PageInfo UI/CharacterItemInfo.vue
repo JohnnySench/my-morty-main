@@ -3,10 +3,11 @@ import {defineComponent, PropType} from 'vue'
 import {mapGetters} from "vuex";
 import CharacterItemPhoto from "@/components/PageInfoCharacters/PageInfo UI/CharacterItemPhoto.vue";
 import {CharactersItemData} from "@/globalInt";
+import CharacterItemInfoStatus from "@/components/PageInfoCharacters/PageInfo UI/CharacterItemInfoStatus.vue";
 
 export default defineComponent({
   name: "CharacterItemInfo",
-  components: {CharacterItemPhoto},
+  components: {CharacterItemInfoStatus, CharacterItemPhoto},
   props: {
     infoCharacter: {
       type: Object as PropType<CharactersItemData>
@@ -23,6 +24,7 @@ export default defineComponent({
 <template>
   <div class="d-flex align-start">
     <CharacterItemPhoto :info="getInfoCharacter"/>
+    <CharacterItemInfoStatus :info="getInfoCharacter"/>
   </div>
 </template>
 

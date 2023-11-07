@@ -20,10 +20,10 @@ export default defineComponent({
     copyField() {
       const link = this.info?.name;
       copyToClipboard(link);
-      let alertTimeout = setTimeout(() => {
-        this.alertVisible = true;
-      }, 1000)
-      clearTimeout(alertTimeout)
+      this.alertVisible = true;
+      setTimeout(() => {
+        this.alertVisible = false;
+      }, 1500)
     }
   }
 })
@@ -34,11 +34,18 @@ export default defineComponent({
     <div class="photo mb-4" @click="openPhoto(info.image)">
       <v-img width="300px" height="300px" :src="info.image"/>
     </div>
-    <div class="character-name">
-      <h2 class="text--link">{{info.name}}</h2>
+    <div class="character-name d-flex align-center justify-center">
+      <h2 class="text--link mr-4">{{info.name}}</h2>
       <v-icon @click="copyField" icon="mdi-content-copy"/>
     </div>
+    <span class="location-character text-grey">location: {{info.location?.name}}</span>
   </div>
+  <v-alert
+      v-if="alertVisible"
+      type="success"
+      title="Alert title"
+      text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde voluptatem!"
+  ></v-alert>
 </template>
 
 <style scoped lang="scss">

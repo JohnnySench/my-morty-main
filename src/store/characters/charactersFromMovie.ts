@@ -11,7 +11,7 @@ export const charactersFromMovie = {
     state: (): State => ({
         characters: [],
         serverIsOn: false,
-        oneCharacter: []
+        oneCharacter: [],
     }),
     getters: {
         GET_CHARACTERS(state: State): Array<Object> {
