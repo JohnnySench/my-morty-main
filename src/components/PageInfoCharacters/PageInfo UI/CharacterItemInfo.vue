@@ -2,7 +2,7 @@
 import {defineComponent, PropType} from 'vue'
 import {mapGetters} from "vuex";
 import CharacterItemPhoto from "@/components/PageInfoCharacters/PageInfo UI/CharacterItemPhoto.vue";
-import CharactersItemData from "@/globalInt";
+import {CharactersItemData} from "@/globalInt";
 
 export default defineComponent({
   name: "CharacterItemInfo",

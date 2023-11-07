@@ -1,6 +1,6 @@
 <script lang="ts">
-import HeaderContainer from "./components/HeaderContent/HeaderContainer.vue";
-import FooterContainer from "./components/FooterContent/FooterContainer.vue";
+import HeaderContainer from "@/components/HeaderContent/HeaderContainer.vue";
+import FooterContainer from "@/components/FooterContent/FooterContainer.vue";
 export default {
   name: 'App',
   components: {FooterContainer, HeaderContainer},

@@ -1,5 +1,5 @@
 import axios from "axios";
-import CharactersItemData from "../../globalInt.ts";
+import {CharactersItemData} from "@/globalInt";
 
 interface State {
     characters: Array<Object>,

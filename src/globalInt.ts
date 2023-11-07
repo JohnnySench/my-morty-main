@@ -6,7 +6,7 @@ interface OriginItem {
     name: string,
     url: string
 }
-export default interface CharactersItemData {
+export interface CharactersItemData {
     created: string,
     episode: string[],
     gender: string,
@@ -27,7 +27,7 @@ interface InfoItemData {
     prev: null | string
 }
 
-export default interface CharactersData {
+export interface CharactersData {
     info: InfoItemData,
     results: CharactersItemData[]
 }

@@ -1,6 +1,6 @@
 <script lang="ts">
 import {defineComponent} from 'vue'
-import PageInfo from "../components/PageInfoCharacters/PageInfo.vue";
+import PageInfo from "@/components/PageInfoCharacters/PageInfo.vue";
 import {mapActions} from "vuex";
 
 export default defineComponent({

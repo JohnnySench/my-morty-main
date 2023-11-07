@@ -1,6 +1,6 @@
 <script lang="ts">
 import {defineComponent, PropType} from 'vue'
-import CharactersItemData from "@/globalInt";
+import {CharactersItemData} from "@/globalInt";
 import {copyToClipboard} from '@/utils/base_tools'
 
 export default defineComponent({
