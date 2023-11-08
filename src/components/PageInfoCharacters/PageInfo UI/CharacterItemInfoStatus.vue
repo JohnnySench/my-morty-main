@@ -18,6 +18,12 @@ export default defineComponent({
         species: this.info.species,
         gender: this.info.gender
       }
+    },
+    sizeClasses() {
+      return {
+        width: '20px',
+        height: '20px'
+      }
     }
   }
 })
@@ -25,7 +31,7 @@ export default defineComponent({
 
 <template>
   <div>
-    <AliveCharacters :status-info="statusCharacters"/>
+    <AliveCharacters :status-info="statusCharacters" :size="sizeClasses"/>
   </div>
 </template>
 
