@@ -19,19 +19,16 @@ export default defineComponent({
         gender: this.info.gender
       }
     },
-    sizeClasses() {
-      return {
-        width: '20px',
-        height: '20px'
-      }
-    }
   }
 })
 </script>
 
 <template>
   <div>
-    <AliveCharacters :status-info="statusCharacters" :size="sizeClasses"/>
+    <AliveCharacters
+        :status-info="statusCharacters"
+        :big-circle="true"
+        :text-color="'text-black'"/>
   </div>
 </template>
 
