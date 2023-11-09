@@ -8,7 +8,7 @@ interface OriginItem {
 }
 export interface CharactersItemData {
     created: string,
-    episode: string[],
+    episode?: string[],
     gender: string,
     id: number,
     image: string,

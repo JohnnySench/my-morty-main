@@ -19,7 +19,7 @@ export const charactersFromMovie = {
         },
         GET_SERVER_STATUS(state: State): boolean {
             return state.serverIsOn
-        }
+        },
     },
     mutations: {
         SET_CHARACTERS(state: State, data: Array<CharactersItemData>): void {

@@ -1,6 +1,5 @@
 <script lang="ts">
 import {defineComponent} from 'vue'
-import {VBtn} from "vuetify/components";
 
 export default defineComponent({
   name: "HeaderActions",

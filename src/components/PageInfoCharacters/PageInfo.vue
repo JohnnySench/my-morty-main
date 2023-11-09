@@ -17,7 +17,7 @@ export default defineComponent({
 
 <template>
   <div class="h-100">
-    <div class="d-flex pa-8">
+    <div class="d-flex justify-center pt-16 character-container px-8">
         <CharacterItemInfo/>
         <CharacterTimeline/>
     </div>
@@ -25,5 +25,7 @@ export default defineComponent({
 </template>
 
 <style scoped lang="scss">
-
+  .character-container {
+    gap: 150px;
+  }
 </style>

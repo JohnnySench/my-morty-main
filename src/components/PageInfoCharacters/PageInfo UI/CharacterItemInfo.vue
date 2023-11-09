@@ -22,7 +22,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="character-wrapper d-flex align-start">
+  <div class="character-wrapper d-flex text-center flex-column">
     <CharacterItemPhoto :info="getInfoCharacter"/>
     <CharacterItemInfoStatus :info="getInfoCharacter"/>
   </div>
@@ -30,6 +30,6 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .character-wrapper {
-  gap: 50px;
+  gap: 10px;
 }
 </style>
